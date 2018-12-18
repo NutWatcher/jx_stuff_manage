@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <LayoutMain />
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import LayoutMain from '@/layout/LayoutMain.vue'; // @ is an alias to /src
 
+@Component({
+  components: {
+    LayoutMain,
+  },
+})
+export default class App extends Vue {}
+</script>
 <style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -15,6 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%
 }
 #nav {
   padding: 30px;
