@@ -32,6 +32,7 @@
                     <div class="layout-nav">
                         <MenuItem name="1">
                             <Icon type="ios-navigate"></Icon>
+                            <router-link to="/about">Home</router-link>
                             Item 1
                         </MenuItem>
                         <MenuItem name="2">
@@ -85,6 +86,7 @@
                         <BreadcrumbItem>Components</BreadcrumbItem>
                         <BreadcrumbItem>Layout</BreadcrumbItem>
                     </Breadcrumb>
+                    <router-view/>
                     <Content :style="{padding: '24px', minHeight: '200px' ,background: '#fff'}">
                         <p>133232</p>
                     </Content>
